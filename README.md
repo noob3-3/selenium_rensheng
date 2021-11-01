@@ -1,0 +1,2 @@
+# selenium_RenShengChongQi
+ 基于selenium实现程序自己玩人生重开模拟器
