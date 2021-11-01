@@ -9,9 +9,9 @@
 * main.py 主程序
 
 ###运行程序前提
-1. 电脑位win64位系统
+1. 电脑位win64位系统 有谷歌浏览器
 2. 安装python3.8
-3. 正确配置selenium
+3. 正确配置谷歌浏览器的selenium
 4. 安装python依赖
    `pip install -r requirements.txt `
 5. python main.py
