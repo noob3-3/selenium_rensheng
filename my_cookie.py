@@ -10,13 +10,13 @@ def get_cookies(url,driver):
 
 
 # 读取本地的cookies
-def read_cookies():
+def read_cookies(domain):
     with open('cookies.txt', 'r', encoding='utf8') as f:
         Cookies = json.loads(f.read())
     cookies = []
     for cookie in Cookies:
         cookie_dict = {
-            'domain': '.weibo.com',
+            'domain': domain,
             'name': cookie.get('name'),
             'value': cookie.get('value'),
             'expires': '',
@@ -28,8 +28,8 @@ def read_cookies():
         cookies.append(cookie_dict)
     return cookies
 
-def set_cookie(driver):
-    cookies = read_cookies()
+def set_cookie(driver,domain):
+    cookies = read_cookies(domain)
     for cookie in cookies:
         driver.add_cookie(cookie)
     time.sleep(3)
